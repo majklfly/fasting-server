@@ -66,7 +66,7 @@ import cors from "cors";
     context: ({ req, res }) => ({ req, res }),
   });
 
-  apolloServer.applyMiddleware({ app, cors: true });
+  apolloServer.applyMiddleware({ app, cors: false });
 
   app.listen(process.env.PORT || 3000, () => {
     console.log("express server started");
