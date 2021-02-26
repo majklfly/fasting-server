@@ -16,6 +16,7 @@ import cors from "cors";
   //allowing all cors
   app.use(cors());
   app.use(function (req, res, next) {
+    console.log(req);
     res.header("Access-Control-Allow-Origin", "*");
     res.header(
       "Access-Control-Allow-Headers",
