@@ -14,7 +14,12 @@ import cors from "cors";
   const app = express();
 
   //allowing all cors
-  app.use(cors());
+  app.use(
+    cors({
+      origin: "https://fasting-server.herokuapp.com/",
+      credentials: true,
+    })
+  );
 
   // parsing cookie middleware followed
   app.use(cookieParser());
