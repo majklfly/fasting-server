@@ -12,7 +12,7 @@ import { createAccessToken, createRefreshToken } from "./auth";
 (async () => {
   const app = express();
 
-  // parsing cookie middleware
+  // parsing cookie middleware followed
   app.use(cookieParser());
 
   // initial route
