@@ -28,6 +28,6 @@
     },
     "scripts": {
         "start": "nodemon --exec ts-node src/index.ts",
-        "heroku-prebuild": "npm install -g ts-node"
+        "heroku-prebuild": "npm install -g ts-node typescript"
     }
 }
