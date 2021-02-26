@@ -15,15 +15,6 @@ import cors from "cors";
 
   //allowing all cors
   app.use(cors());
-  app.use(function (req, res, next) {
-    console.log(req);
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept"
-    );
-    next();
-  });
 
   // parsing cookie middleware followed
   app.use(cookieParser());
@@ -75,7 +66,7 @@ import cors from "cors";
     context: ({ req, res }) => ({ req, res }),
   });
 
-  apolloServer.applyMiddleware({ app, cors: false });
+  apolloServer.applyMiddleware({ app, cors: true });
 
   app.listen(process.env.PORT || 3000, () => {
     console.log("express server started");
