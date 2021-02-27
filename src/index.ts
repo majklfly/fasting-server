@@ -56,8 +56,8 @@ import { createAccessToken, createRefreshToken } from "./auth";
     schema: await buildSchema({
       resolvers: [UserResolver],
     }),
-    // playground: true,
-    // introspection: true,
+    playground: true,
+    introspection: true,
     // request and response is accessible in the context
     context: ({ req, res }) => ({ req, res }),
   });
