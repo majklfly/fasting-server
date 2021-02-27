@@ -14,12 +14,7 @@ import cors from "cors";
   const app = express();
 
   //allowing all cors
-  app.use(
-    cors({
-      origin: "http://localhost:19006/",
-      credentials: true,
-    })
-  );
+  app.use(cors());
 
   // parsing cookie middleware followed
   app.use(cookieParser());
