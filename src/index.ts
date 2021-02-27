@@ -16,8 +16,7 @@ import cors from "cors";
   //allowing all cors
   app.use(
     cors({
-      origin: "https://fasting-server.herokuapp.com/",
-      credentials: true,
+      origin: "http://localhost:19002/",
     })
   );
 
