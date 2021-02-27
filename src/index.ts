@@ -8,13 +8,9 @@ import cookieParser from "cookie-parser";
 import { verify } from "jsonwebtoken";
 import { User } from "./entity/User";
 import { createAccessToken, createRefreshToken } from "./auth";
-import cors from "cors";
 
 (async () => {
   const app = express();
-
-  //allowing all cors
-  app.use(cors());
 
   // parsing cookie middleware followed
   app.use(cookieParser());
