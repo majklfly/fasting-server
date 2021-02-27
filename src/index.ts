@@ -16,7 +16,7 @@ import cors from "cors";
   //allowing all cors
   app.use(
     cors({
-      origin: "http://localhost:19002/",
+      origin: "http://localhost:19006/",
     })
   );
 
