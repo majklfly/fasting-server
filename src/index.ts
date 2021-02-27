@@ -17,6 +17,7 @@ import cors from "cors";
   app.use(
     cors({
       origin: "http://localhost:19006/",
+      credentials: true,
     })
   );
 
@@ -70,7 +71,7 @@ import cors from "cors";
     context: ({ req, res }) => ({ req, res }),
   });
 
-  apolloServer.applyMiddleware({ app, cors: false });
+  apolloServer.applyMiddleware({ app, path: "/graphql", cors: false });
 
   app.listen(process.env.PORT || 3000, () => {
     console.log("express server started");
